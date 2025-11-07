@@ -1,0 +1,328 @@
+/* پایه‌ها */
+:root{
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --accent: #7c3aed;
+  --text: #222;
+  --muted: #555;
+  --radius: 12px;
+  font-family: 'Vazirmatn', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box;}
+html,body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  direction:rtl; /* راست‌چین برای فارسی */
+}
+
+/* ظرف بندی مرکزی */
+.container{
+  max-width:900px;
+  margin:0 auto;
+  padding:20px;
+}
+
+/* هدر */
+.site-header{
+  background:linear-gradient(90deg, #fff, #fbfbff);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.site-header .container{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+}
+.site-title{ margin:0; font-size:1.25rem; color:var(--accent); }
+.main-nav a{
+  margin-left:8px;
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:500;
+}
+.menu-btn{
+  display:none;
+  background:transparent;
+  border:1px solid var(--accent);
+  padding:6px 10px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* هِیرو */
+.hero{
+  background:linear-gradient(180deg, rgba(124,58,237,0.08), transparent);
+  padding:26px;
+  border-radius:var(--radius);
+  margin-top:18px;
+}
+
+/* کارت‌ها */
+.card{
+  background:var(--card);
+  padding:16px;
+  border-radius:12px;
+  margin-top:16px;
+  box-shadow:0 6px 18px rgba(20,20,40,0.04);
+}
+
+/* فوتر */
+.site-footer{
+  margin-top:28px;
+  padding:16px 0;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* واکنش‌گرایی ساده */
+@media (max-width:720px){
+  .main-nav{ display:none; }
+  .menu-btn{ display:inline-block; }
+  .container{ padding:14px; }
+} 
+/* 🌸 تنظیمات کلی صفحه */
+body {
+  font-family: "Vazir", Arial, sans-serif; /* فونت فارسی زیبا */
+  direction: rtl; /* متن راست‌چین */
+  background-color: #f8f9fa; /* رنگ پس‌زمینه روشن */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🎀 هدر (بالای صفحه) */
+header {
+  background-color: #8e44ad; /* بنفش ملایم */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* 📄 بخش محتوا */
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 💬 تیترها */
+h2 {
+  color: #8e44ad;
+  border-bottom: 2px solid #8e44ad;
+  padding-bottom: 5px;
+}
+
+/* 🔹 لینک‌ها */
+a {
+  color: #8e44ad;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #6c3483;
+  text-decoration: underline;
+}
+
+/* 📱 پابرگ (پایین صفحه) */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #8e44ad;
+  color: white;
+  margin-top: 40px;
+  font-size: 14px;
+} 
+/* 🖼 استایل عکس پروفایل */
+#profile {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%; /* گرد شدن عکس */
+  object-fit: cover;
+  border: 4px solid #8e44ad; /* قاب بنفش دور عکس */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+} 
+ /* تنظیمات پایه */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #E0F7FA; /* آبی آسمونی روشن */
+  color: #9575CD; /* بنفش یاسی */
+  margin: 0;
+  padding: 0;
+}
+
+/* هدر */
+header {
+  background-color: #F8BBD0; /* صورتی ملایم */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(149, 117, 205, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Pacifico', cursive; /* فونت دست‌نویس */
+  font-size: 2.5rem;
+  color: #4A148C; /* بنفش تیره‌تر برای کنتراست */
+}
+
+header nav a {
+  color: #4A148C;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #F48FB1; /* صورتی روشن‌تر */
+}
+
+/* بخش اصلی */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(149, 117, 205, 0.1);
+  color: #5D4037; /* قهوه‌ای ملایم برای متن */
+}
+
+section h2 {
+  font-family: 'Pacifico', cursive;
+  color: #9575CD;
+  margin-bottom: 15px;
+}
+
+/* لیست مهارت‌ها */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: #6D4C41;
+}
+
+/* لینک‌ها */
+a {
+  color: #9575CD;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #F48FB1;
+}
+
+/* پابرگ */
+footer {
+  background-color: #F8BBD0;
+  text-align: center;
+  padding: 15px 0;
+  color: #4A148C;
+  font-weight: 600;
+  box-shadow: 0 -2px 5px rgba(149, 117, 205, 0.3);
+  border-radius: 0 0 15px 15px;
+}
+
+/* ریسپانسیو ساده */
+@media (max-width: 600px) {
+  main {
+    padding: 0 10px;
+  }
+  header nav a {
+    display: block;
+    margin: 10px 0;
+  }
+} 
+/* افکت hover روی لینک‌ها */
+a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #F48FB1; /* صورتی روشن‌تر */
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+/* افکت hover روی بخش‌ها */
+section {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 8px 16px rgba(149, 117, 205, 0.3);
+  transform: translateY(-5px);
+} 
+/* 🎯 بهینه‌سازی برای موبایل و تبلت */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  header {
+    padding: 15px 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header nav a {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 15px 10px;
+  }
+}
