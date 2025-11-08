@@ -93,6 +93,36 @@
   <footer>
     <p>© 2025 سحر. همه حقوق محفوظ است.</p>
   </footer>
+  <script>
+    // وقتی صفحه بارگذاری شد
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.getElementById('menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+      });
+
+      // پیمایش نرم برای لینک‌های داخلی
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = this.getAttribute('href').substring(1);
+          const section = document.getElementById(id);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // اگر منو باز بود، آن را ببند
+            if (sidebar.classList.contains('active')) {
+              sidebar.classList.remove('active');
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
 </body>
 
 </html>
