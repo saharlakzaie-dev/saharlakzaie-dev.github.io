@@ -106,6 +106,7 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+
 header h1 {
   margin: 0;
   font-size: 28px;
@@ -325,4 +326,11 @@ section:hover {
     font-size: 14px;
     padding: 15px 10px;
   }
+} 
+.logo {
+  width: 40px;          /* اندازه کوچیک */
+  height: 40px;
+  border-radius: 50%;   /* گرد شدن کامل */
+  object-fit: cover;    /* پر شدن عکس داخل دایره */
+  border: 2px solid #ccc; /* (اختیاری) حاشیه دور لوگو */
 }
