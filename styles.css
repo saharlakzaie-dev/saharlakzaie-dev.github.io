@@ -334,3 +334,158 @@ section:hover {
   object-fit: cover;    /* پر شدن عکس داخل دایره */
   border: 2px solid #ccc; /* (اختیاری) حاشیه دور لوگو */
 }
+/* === منوی کناری سمت راست === */
+
+body {
+  margin: 0;
+  font-family: "Vazir", sans-serif;
+  background-color: #fffafc;
+}
+/* 🌸 منوی سمت راست پاستیلی */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 210px;
+  background: linear-gradient(180deg, #FFD1DC 0%, #FFF0F5 100%);
+  box-shadow: -4px 0 15px rgba(255, 182, 193, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  z-index: 1000;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+/* عنوان منو */
+.sidebar h2 {
+  color: #FF6F91;
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* لینک‌های منو */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  text-decoration: none;
+  color: #444;
+  font-size: 16px;
+  width: 80%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin: 8px 0;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* افکت hover */
+.sidebar a:hover {
+  background-color: #FFB6C1;
+  color: white;
+  transform: translateX(-5px);
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.6);
+}
+
+/* آیکون‌های منو */
+.sidebar a svg {
+  width: 20px;
+  height: 20px;
+  fill: #FF6F91;
+  transition: fill 0.3s ease;
+}
+
+.sidebar a:hover svg {
+  fill: white;
+}
+
+/* محتوای اصلی */
+.content {
+  margin-right: 230px; /* فاصله از منوی سمت راست */
+  margin-left: auto;
+  margin-top: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  max-width: 1000px; /* عرض محتوا محدود و وسط‌چین */
+}
+
+
+
+/* بخش‌های داخل صفحه */
+section {
+  margin-bottom: 60px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+/* استایل دکمه منو */
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #FF6F91;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background-color 0.3s ease;
+}
+
+#menu-toggle:hover {
+  background-color: #FF4081;
+}
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 210px;
+  background: linear-gradient(180deg, #FFD1DC 0%, #FFF0F5 100%);
+  box-shadow: -4px 0 15px rgba(255, 182, 193, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* برای دسکتاپ: منو همیشه باز و دکمه مخفی */
+@media (min-width: 768px) {
+  #menu-toggle {
+    display: none;
+  }
+  .sidebar {
+    transform: translateX(0);
+    position: fixed;
+    z-index: 1000; /* حفظ شود */
+  }
+  .content {
+    margin-right: 230px; /* فاصله برای قرار گرفتن کنار منو */
+    margin-left: auto;
+    max-width: 1000px;
+  }
+}
